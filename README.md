@@ -1,8 +1,8 @@
-[![CircleCI](https://dl.circleci.com/status-badge/img/gh/DLR-AMR/t8code-website/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/DLR-AMR/t8code-website/tree/main)
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/sandro-elsweijer/padme-am-website/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/sandro-elsweijer/padme-am-website/tree/main)
 
 # Website for t8code
 
-Homepage (landing page) and announcements for t8code (https://github.com/DLR-AMR/t8code).
+Website and announcements for the PADME-AM project.
 
 Based on [Pelican](http://blog.getpelican.com/) and a modifed Polar theme by [CodePassenger](http://www.codepassenger.com/).
 
@@ -11,15 +11,15 @@ Based on [Pelican](http://blog.getpelican.com/) and a modifed Polar theme by [Co
 * Clone t8code-website
 
   ```
-  git clone git@github.com:DLR-AMR/t8code-website.git
+  git clone git@github.com:sandro-elsweijer/padme-am-website.git
   ```
   or
   ```
-  git clone https://github.com/DLR-AMR/t8code-website.git
+  git clone https://github.com/sandro-elsweijer/padme-am-website.git
   ```
 * Change to 
   ```
-  t8code-website/
+  padme-am-website/
   ```
 
 * Install pelican, fabric3 and some other dependencies
@@ -59,7 +59,7 @@ The required meta data for t8code release announcements are:
 Title: Release 3.0.0
 Date: 2019-01-01 00:00
 Category: Releases
-Author: t8code
+Author: xxx
 ```
 
 
