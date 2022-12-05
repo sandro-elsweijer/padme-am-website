@@ -109,8 +109,8 @@ jobs:
       - run:
           name: Push site to gh-pages
           command: |
-            git remote add pages https://github.com/dlr-amr/t8code.git
-            ghp-import -r pages -m "[skip ci] Update Site" -p -n -f published
+            #git remote add pages https://github.com/dlr-amr/t8code.git
+            #ghp-import -r pages -m "[skip ci] Update Site" -p -n -f published
 
 
 # These workflows define how the jobs above will run. In our case, we
