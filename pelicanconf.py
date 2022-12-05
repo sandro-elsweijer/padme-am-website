@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'DLR'
-SITENAME = u't8code'
+AUTHOR = u'Rheinische Friedrich-Wilhelms-Universität Bonn'
+SITENAME = u'PADME-AM'
 SITEURL = ''
-SITE_SUMMARY = 't8code - Parallel algorithms and data structures for tree-based AMR with arbitrary element shapes.'
+SITE_SUMMARY = 'PADME-AM - Partition der Eins Methoden für Additive Manufacturing'
 
 PATH = 'content'
 

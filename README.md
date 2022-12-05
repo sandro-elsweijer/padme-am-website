@@ -1,6 +1,6 @@
 [![CircleCI](https://dl.circleci.com/status-badge/img/gh/sandro-elsweijer/padme-am-website/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/sandro-elsweijer/padme-am-website/tree/main)
 
-# Website for t8code
+# Website for PADME-AM
 
 Website and announcements for the PADME-AM project.
 
@@ -8,7 +8,7 @@ Based on [Pelican](http://blog.getpelican.com/) and a modifed Polar theme by [Co
 
 ## Local Installation
 
-* Clone t8code-website
+* Clone PADME-AM-website
 
   ```
   git clone git@github.com:sandro-elsweijer/padme-am-website.git
@@ -54,7 +54,7 @@ Add new articles to `content`.
 
 ### Metadata
 
-The required meta data for t8code release announcements are:
+The required meta data for PADME-AM announcements are:
 ```
 Title: Release 3.0.0
 Date: 2019-01-01 00:00
