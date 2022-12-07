@@ -258,15 +258,16 @@ a:focus{
     margin-bottom: 20px;
 }
 .website-title {
-	font-size:2em;
+	font-size:1.5em;
 	line-height: 20px;
 	color: #910035;
 	font-weight: bold;
 }
 .website-subtitle {
 	font-size:1em;
-	line-height: 10px;
+	line-height: 18px;
 	color: #737373;
+	margin-top: 0;
 }
 
 /* 2 - General Styles End
