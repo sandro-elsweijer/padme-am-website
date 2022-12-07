@@ -100,22 +100,100 @@
 	<div id="contents"> 
 		<div class="container">
 			<section class="row about-us section-padding pb0">
-				<div class="col-md-6">
-					<h2 class="section-title">About</h2>
-					<p>  		
-						t8code (spoken as "tetcode") is a C/C++ library to manage parallel adaptive meshes with various element types.
-						t8code uses a collection (a forest) of multiple connected adaptive space-trees in parallel and scales to at least one million MPI ranks and over 1 Trillion mesh elements.
-					</p>
-					<p>
-						t8code is intended to be used as a thirdparty library for numerical simulation codes or any other applications that require meshes.
-					</p>
-				</div><!-- /.col-md-6 -->
-				<div class="col-md-6">
-					<div class="feature-image">
-						<img src="pages/images/home/AirplaneWithTetMesh.png"/>
-
-					</div>
-				</div><!-- /.col-md-6 -->
+				<div class="col-md-9">
+					<h2 class="section-title">Overall Research Goals</h2>
+					<p>Additive manufacturing (AM) has gained more and more momentum in recent
+						years, but has yet to fullfil the promise of becoming the widely used
+						break-through-technology that will revolutionize manufacturing in the
+						21st century. Despite all the advantages, such as the high degree of
+						design freedom and the shortened production time for highly complex
+						parts, additively manufactured components are still hardly used in
+						safety-relevant areas. This is due to the fact that, compared to
+						conventional processes such as milling, the processes are significantly
+						more complex and the material quality of the manufactured component
+						cannot be predicted with certainty. Time-consuming and costly quality
+						control requirements prevent the widespread use of AM. These issues can
+						in principle be overcome by advanced modeling and simulation of the
+						manufacturing process which will then allow to optimize the process.</p>
+						<p>For the design of AM components and for the simulation of a Laser Powder
+						Bed Fusion (LPBF) process, solutions are offered by various software
+						vendors, such as Siemens, Altair or ANSYS. However, these solutions
+						reflect the low level of maturity of the still young 3D printing
+						technologies. Their capabilities are not sufficient to obtain accurate
+						process control. In order to be able to obtain the required accuracy, a
+						multiscale and multidisciplinary approach is required that combines
+						experimental and theoretical work with computer simulations on multiple
+						length scales.</p>
+						<p>The simulation of the LPBF process involves various
+						challenges. Obviously, the domain evolves during the process by adding
+						additional layers of powder. Moreover, multiple phase changes need to be
+						resolved, from powder to liquid and from liquid to solid, since a direct
+						conversion from powder to solid is not possible. Material phases form
+						and transform during subsequent laser passes. Furthermore, this extremly
+						complex environment is truely a multiscale process. The laser heat
+						source is highly localized (about 100 micron) and in case of AMB laser
+						sources may require the resolution of even further details.
+						Yet, the printed product is typically on the scale of decimeters and
+						scale separation in LPBF is not given due to the intermediate powder bed
+						layer scale. Similarly, a large range of time scales is involved and
+						needs to be resolved appropriately. While local melting and
+						solidification takes place within milliseconds, the complete
+						manufacturing of a final part may require multiple days. Finally, we
+						need to deal with all of these challenges on computational domains which
+						shape and topology may be extremely complex and change substantially
+						over time.</p>
+						<div class="feature-image">
+							<img alt="image" src="https://ins.uni-bonn.de/media/public/projects/partition-of-unity-methods-for-additive-manufacturing/Beispielbild.png" />
+						</div>
+						Examples for the multiscalarity of
+						additive manufacturing: a) raw powder, b) melt pool monitoring (MPM)
+						data for a single melted layer and the corresponding light optical
+						image; c) MPM data of a small cuboid exhibiting different
+						microstructures; d) MPM data and image of a larger component. (source:
+						DLR)</p>
+						<div class="feature-image">
+							<img alt="image" src="https://ins.uni-bonn.de/media/public/projects/partition-of-unity-methods-for-additive-manufacturing/AMB-vs-normal-laser-welding.jpg" />
+						  <img alt="image" src="https://ins.uni-bonn.de/media/public/projects/partition-of-unity-methods-for-additive-manufacturing/amb_laser_1.jpg" />
+						</div>
+						<p>Overall, the LPBF process constitutes a multi-physics problem, where the
+						largest temperature gradients are induced by the moving and highly
+						localized laser beam which in turn yield the phase changes in close
+						vicinity of the beam. The involved phase changes are typically modeled
+						by</p>
+						<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mi>c</mi><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>T</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi>ρ</mi><mi>L</mi><mfrac><mrow><mi mathvariant="normal">∂</mi><msub><mi>f</mi><mrow><mi>p</mi><mi>c</mi></mrow></msub></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mo>−</mo><mi mathvariant="normal">∇</mi><mo>⋅</mo><mo stretchy="false">(</mo><mi>k</mi><mi mathvariant="normal">∇</mi><mi>T</mi><mo stretchy="false">)</mo><mo>=</mo><mi>Q</mi></mrow><annotation encoding="application/x-tex">\rho c \frac{\partial T}{\partial t} + \rho L \frac{\partial f_{pc}}{\partial t} - \nabla \cdot (k \nabla T) = Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="mord mathdefault">ρ</span><span class="mord mathdefault">c</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="mord mathdefault">ρ</span><span class="mord mathdefault">L</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span><span class="mord mathdefault mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">∇</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord">∇</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">Q</span></span></span></span></span></p>
+						<p>where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">ρ</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi>p</mi><mi>c</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_{pc}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span><span class="mord mathdefault mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> denote density, specific heat
+						capacity, latent heat and a phase-change function, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> is the thermal
+						conductivity, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">Q</span></span></span></span> is the heat source and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span> the temperature. Due to the
+						significant changes in temperature during the process, some regions in
+						the domain expand, while some others contract which leads to residual
+						stresses in the part and potentially render the product not fit-for-use
+						in safety-relevant applications. These stresses are computed via a
+						quasi-static mechanical model given by</p>
+						<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∇</mi><mo>⋅</mo><mi>σ</mi><mo>+</mo><mi>f</mi><mo>−</mo><msub><mi>f</mi><mrow><mi>t</mi><mi>h</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \sigma + f - f_{th} = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">∇</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight">h</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></span> </p>
+						<p>where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi>t</mi><mi>h</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_{th}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight">h</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> denotes the thermal load induced by the temperature field <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span>.</p>
+						<p>The simulation environment to be developed is intended to cover all
+						relevant scales in the long term from the powder level to the entire
+						component. In order to build up a process simulation tool that can be
+						expanded and is suitable for research, a high degree of flexibility in
+						the modeling is important. This will also include the implementation of
+						variable beam profiles such as e.g. from new Ringmode-lasers (Figure 1)
+						that are not yet standard in AM processes. At the same time, as much as
+						possible should be built on existing simulation modules. Therefore, a
+						meshfree partition of unity method (PUM), a generalization of the finite
+						element method (FEM), with which multiscale partial differential
+						equations can be solved on complex geometries, offers an ideal basis for
+						such a development. In contrast to classical FEM, a meshing of the
+						simulation domain can be omitted. Local refinements and free surfaces
+						can be easily represented. Finally, the basis functions of the PUM, from
+						which the solution is constructed, can be enriched by domain knowledge,
+						experimental results, AI building blocks or further simulation results.
+						Thus, the multiscale underlying additive manufacturing can be achieved
+						by local refinements in the PUM, enrichment of the basis functions, and
+						by uni- or bidirectional co-simulation with other simulation tools. As a
+						first step in the course of the project, we want to answer the question
+						how the heat input by the lasers at powder level is transferred to the
+						overall component.</p>
+				</div><!-- /.col-md-9 -->
 			</section><!-- /.about-us -->
 			<section class="row about-us section-padding pb0">
 				<div class="col-md-6">
