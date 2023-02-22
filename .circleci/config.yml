@@ -18,6 +18,9 @@ jobs:
     docker:
       - image: circleci/python:3.6-stretch
     steps:
+      # get the right key for github.com
+      - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
+
       # Get our data and merge with upstream
       - checkout
 
@@ -42,6 +45,9 @@ jobs:
     docker:
       - image: circleci/python:3.6-stretch
     steps:
+      # get the right key for github.com
+      - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
+      
       # Get our data and merge with upstream
       - checkout
 
@@ -99,11 +105,14 @@ jobs:
           name: "Install rsync"
           command: sudo apt install rsync
 
-      # Tell CircleCI to use the SSH key we've set up with permissions to push to our repo
-      - add_ssh_keys:
-          fingerprints:
-            # The SSH key fingerprint
-            - "54:45:ad:2d:50:a5:39:ed:72:dc:f1:05:61:50:27:3f"
+      # Tell CircleCI to use the SSH key we've set up with permissions to push to the webserver
+      #- add_ssh_keys:
+      #    fingerprints:
+      #      # The SSH key fingerprint
+      #      - "54:45:ad:2d:50:a5:39:ed:72:dc:f1:05:61:50:27:3f"
+
+      # get the right key for the webserver
+      - run: ssh-keyscan -p $SSH_PORT $SSH_USER@$SSH_HOST >> ~/.ssh/known_hosts
 
       # Push the `_site` folder to our gh-pages branch for it to go live
       - run:
