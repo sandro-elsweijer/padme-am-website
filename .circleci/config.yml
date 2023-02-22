@@ -82,8 +82,8 @@ jobs:
 
   # Finally, push the HTML to the gh-pages branch
   html_live:
-    docker:
-      - image: circleci/python:3.6-stretch
+    machine:
+     enabled: true
     steps:
       - checkout
 
@@ -94,30 +94,28 @@ jobs:
       # Copy over the built page files
       - copy_built_files
 
-      # Install the ghp-import tool which we'll use to push the files
+      # Install the rsync
       - run:
-          name: "Install ghp-import"
-          command: pip install -U ghp-import
+          name: "Install rsync"
+          command: sudo apt install rsync
 
       # Tell CircleCI to use the SSH key we've set up with permissions to push to our repo
       - add_ssh_keys:
           fingerprints:
             # The SSH key fingerprint
-            - "04:83:0d:df:0a:3f:70:9f:06:7e:5b:c0:78:09:0c:c2"
+            - "54:45:ad:2d:50:a5:39:ed:72:dc:f1:05:61:50:27:3f"
 
       # Push the `_site` folder to our gh-pages branch for it to go live
       - run:
-          name: Push site to gh-pages
+          name: Copy files to webserver
           command: |
-            #git remote add pages https://github.com/dlr-amr/t8code.git
-            #ghp-import -r pages -m "[skip ci] Update Site" -p -n -f published
+            rsync -avz -e "ssh -p $SSH_PORT" --progress pages $SSH_USER@$SSH_HOST:/home/padme/html/
 
 
 # These workflows define how the jobs above will run. In our case, we
 # want the Ruby jobs to run *after* the Python job has finished so that
 # they can use the outputs from the Python page build step.
 workflows:
-  version: 2
   default:
     jobs:
       # First we build the pages
