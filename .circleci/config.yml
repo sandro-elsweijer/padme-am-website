@@ -110,7 +110,7 @@ jobs:
       #      - "54:45:ad:2d:50:a5:39:ed:72:dc:f1:05:61:50:27:3f"
 
       # get the right key for the webserver
-      - run: ssh-keyscan -p $SSH_PORT $SSH_USER@$SSH_HOST >> ~/.ssh/known_hosts
+      - run: ssh-keyscan -p $SSH_PORT $SSH_HOST >> ~/.ssh/known_hosts
 
       # Push the `_site` folder to our gh-pages branch for it to go live
       - run:
