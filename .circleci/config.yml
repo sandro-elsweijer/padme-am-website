@@ -19,6 +19,7 @@ jobs:
       - image: circleci/python:3.6-stretch
     steps:
       # get the right key for github.com
+      - run: mkdir -p ~/.ssh
       - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
 
       # Get our data and merge with upstream
@@ -46,6 +47,7 @@ jobs:
       - image: circleci/python:3.6-stretch
     steps:
       # get the right key for github.com
+      - run: mkdir -p ~/.ssh
       - run: ssh-keyscan github.com >> ~/.ssh/known_hosts
       
       # Get our data and merge with upstream
@@ -71,8 +73,6 @@ jobs:
     docker:
       - image: circleci/python:3.6-stretch
     steps:
-      - checkout
-
       # Attach the workspace that contains the files from our Python step
       - attach_workspace:
           at: /tmp/workspace
@@ -91,8 +91,6 @@ jobs:
     machine:
      enabled: true
     steps:
-      - checkout
-
       # Attach the workspace that contains the files from our Python step
       - attach_workspace:
           at: /tmp/workspace
