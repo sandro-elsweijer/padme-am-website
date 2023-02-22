@@ -116,7 +116,7 @@ jobs:
       - run:
           name: Copy files to webserver
           command: |
-            rsync -avz -e "ssh -p $SSH_PORT" --progress published $SSH_USER@$SSH_HOST:/home/padme/html/
+            rsync -avz -e "ssh -p $SSH_PORT" --progress published/ $SSH_USER@$SSH_HOST:/home/padme/html
 
 
 # These workflows define how the jobs above will run. In our case, we
