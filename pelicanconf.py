@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*- #
 from __future__ import unicode_literals
 
-AUTHOR = u'Rheinische Friedrich-Wilhelms-Universität Bonn'
+AUTHOR = u'Institute fo Numerical Simulation'
 SITENAME = u'PADME-AM'
 SITEURL = ''
-SITE_SUMMARY = 'PADME-AM - Partition der Eins Methoden für Additive Manufacturing'
+SITE_SUMMARY = 'PADME-AM - Partition of Unity Methods for Additive Manufacturing'
 
 PATH = 'content'
 
-TIMEZONE = 'Europe/Paris'
+TIMEZONE = 'Europe/Berlin'
 
 DEFAULT_LANG = u'en'
 LOCALE = "C"
@@ -26,11 +26,13 @@ AUTHOR_FEED_ATOM = None
 AUTHOR_FEED_RSS = None
 
 # Blogroll
-LINKS = (('Institute for Software Technology', 'http://www.dlr.de/sc'),
-         ('Imprint', '%s/pages/imprint.html' % SITEURL),
-         ('Privacy', '%s/pages/privacy.html' % SITEURL),
-         ('Terms of use', '%s/pages/terms-of-use.html' % SITEURL),
-         ('Accessibility', '%s/pages/accessibility.html' % SITEURL),)
+LINKS = (('Institute for Numerical Simulation', 'https://ins.uni-bonn.de/'),
+         ('Institute for Software Technology', 'http://www.dlr.de/sc/en/'),
+         ('Institute of Materials Science', 'http://www.dlr.de/wf/en/'),
+         ('Access Technology', 'https://access-technology.de/'),
+         ('Fraunhofer SCAI', 'https://www.scai.fraunhofer.de/en.html'),
+         ('Imprint', 'https://ins.uni-bonn.de/content/impressum'),
+         ('Privacy', 'https://ins.uni-bonn.de/content/privacy'))
 
 # Social widget
 SOCIAL = ()
@@ -51,8 +53,8 @@ SITEMAP = {
 RELATIVE_URLS = True
 
 # Static paths
-STATIC_PATHS = ['images', 'pages/images', 'extra/CNAME', 'doc']
-ARTICLE_EXCLUDES = ['doc']
+STATIC_PATHS = ['images', 'pages/images', 'extra/CNAME']
+ARTICLE_EXCLUDES = []
 
 # Plugins
 PLUGIN_PATHS = ["plugins"]
