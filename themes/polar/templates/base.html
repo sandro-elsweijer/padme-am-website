@@ -47,8 +47,8 @@
     {% else %}
     <meta name="description" content="{{ SITE_SUMMARY }}"/>
     {% endif%} 
-	<meta name="keywords" content="t8code, adaptive mesh refinement, amr, dlr, hpc, adaptive meshes, exascale, simulation, cpp, numerical, finite volume, discontinuous galerkin, Open Source">
-	<meta name="author" content="Deutsches Zentrum für Luft- und Raumfahrt e.V. (DLR)">
+	<meta name="keywords" content="ins, dlr, hpc, simulation, cpp, numerical, pum, partition of unity, slm, selective laser melting">
+	<meta name="author" content="Institute for Numerical Simulation">
 
 	{% if article %}
 	{% for tag in article.ogtags %}
@@ -199,12 +199,12 @@
 		<div class="social-btn footer-social text-center">
 			<!--<a href="https://twitter.com" class="twitter"><i class="fa fa-twitter"></i></a>-->
 			<!--<a href="https://www.youtube.com" class="youtube"><i class="fa fa-youtube"></i></a>-->
-			<a href="https://github.com/DLR-AMR/t8code" class="github"><i class="fa fa-github"></i></a>
+			<!--<a href="https://github.com/DLR-AMR/t8code" class="github"><i class="fa fa-github"></i></a>-->
 		</div>
 
 
 		<div class="site-info text-center">
-			 &copy; 2022 <a href="http://www.DLR.de">Deutsches Zentrum für Luft- und Raumfahrt e.V.</a>
+			 &copy; <script>document.write(/\d{4}/.exec(Date())[0])</script>
 
 			 {% if LINKS %}
 				{% for name, link in LINKS %}

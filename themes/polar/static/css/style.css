@@ -364,15 +364,15 @@ a:focus{
 }
 .main-mav>li>a.donate:focus,
 .main-mav>li>a.donate:hover {
-	background: #501b5e;
+	background: #4d001c;
 	color: #fff;
 }
 .main-mav>li>a.donate.green {
-	background: #501b5e;
+	background: #4d001c;
 }
 .main-mav>li>a.donate.green:focus,
 .main-mav>li>a.donate.green:hover {
-	background: #501b5e; 
+	background: #4d001c; 
 	color: #fff;
 }
 .transparent-nav #main-menu {
@@ -531,7 +531,7 @@ a:focus{
 }
 .top-sec-btn:hover{
 	color: #fff; 
-	background: #501b5e;
+	background: #4d001c;
 }
 .top-sec-btn:hover:after { 
 	background: #910035;
@@ -630,7 +630,7 @@ a:focus{
 	height: 50px;
 }
 .top-slider-container.v2 .top-sec-btn:hover {
-	background: #501b5e;
+	background: #4d001c;
 }
 .top-slider-container.v2 .top-sec-btn:after {
 	display: none;
@@ -654,7 +654,7 @@ a:focus{
 	        transition: all .25s ease;
 }
 .top-slider-container.v2 .video-link:hover .icon {
-	color : #501b5e;
+	color : #4d001c;
 }
 
 /* 4 - Slider End
@@ -2475,7 +2475,7 @@ article.news-container  .entry {
 	border-bottom: 2px solid rgba(0,0,0,.2);
 } 
 .join-us.btn:hover {
-	background: #501b5e;
+	background: #4d001c;
 }
 
 /* 27 - Recent Event Section End
@@ -2560,7 +2560,7 @@ article.news-container  .entry {
 	margin: auto;
 }
 .tweet-message i.fa {
-	color: #501b5e;
+	color: #4d001c;
 }
 .tweets-carosel .slide-nav {
 	position: absolute;
@@ -2731,7 +2731,7 @@ article.news-container  .entry {
 	border-bottom: 2px solid rgba(0,0,0,.2);
 } 
 .pricing-table .sign-up.btn:hover {
-	background: #501b5e; 
+	background: #4d001c; 
 } 
 .pricing-table.featured:before,
 .pricing-table.featured .pricing-box:before {
