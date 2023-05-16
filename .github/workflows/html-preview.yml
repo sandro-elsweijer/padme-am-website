@@ -9,7 +9,7 @@ jobs:
     steps:
       - name: GitHub Action step
         id: step1
-        uses: larsoner/circleci-artifacts-redirector-action@v3
+        uses: larsoner/circleci-artifacts-redirector-action@0.3.1
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
           artifact-path: 0/html/index.html
