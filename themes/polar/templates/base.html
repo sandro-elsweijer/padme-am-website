@@ -162,7 +162,7 @@
 					<!--	<li><a href="{{ SITEURL }}/#contents">What is TiGL?</a></li>   -->
 						
 						<li><a {% if page_name != "index" %}class="not-in-home"{% endif %} href="{{ SITEURL }}/#contents">Research Goals</a></li>
-						<li><a {% if page_name != "index" %}class="not-in-home"{% endif %} href="{{ SITEURL }}/#partners">Project Partners</a></li>
+						<li><a {% if page_name != "index" %}class="not-in-home"{% endif %} href="{{ SITEURL }}/#participants">Project Participants</a></li>
 						<li><a {% if page_name != "index" %}class="not-in-home"{% endif %} href="{{ SITEURL }}/#news">News</a></li>
 
 						{% for title, link in MENUITEMS %}
@@ -245,13 +245,6 @@
 	        		easing: 'swing'
 	        	});  
 	        });
-		$(window).on('scroll', function (){ 
-			if ($(window).scrollTop() >$(window).height()-110){
-				$('#main-menu').addClass('navbar-fixed-top'); 
-			} else {
-				$('#main-menu').removeClass('navbar-fixed-top'); 
-			} 
-		});
 	 })(jQuery);
 	</script>
 

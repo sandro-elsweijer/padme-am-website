@@ -407,7 +407,7 @@ a:focus{
 	color: #fff;
 }
 .transparent-nav #main-menu {
-	background: rgba(255,255,255,.30);
+	background: rgba(255,255,255,1);
 	-webkit-transition: all .25s ease;
 	   -moz-transition: all .25s ease;
 	    -ms-transition: all .25s ease;
@@ -483,6 +483,7 @@ a:focus{
 }
 .top-slider-container {
 	width: 100%;
+	margin: auto;
 	height: auto;
 	overflow: hidden;
 	position: relative;  
@@ -623,7 +624,7 @@ a:focus{
 	margin-left: -20px;
 } 
 .top-section.image-slide .slide-img-bg {
-
+	height: 50vh;
 }
 /*  Image Slide End  */
 
@@ -3250,16 +3251,13 @@ article.news-container  .entry {
 /* 36 - Background  Images 
 ******************************************************/
 #home-slide-1 {
-	background-image: url('../../images/slider/slider1.png');
+	background-image: url('../../images/slider/slider1.jpg');
 }
 #home-slide-2 {
-	background-image: url('../../images/slider/slider2.png');
+	background-image: url('../../images/slider/slider2.jpg');
 }
 #home-slide-3 {
-	background-image: url('../../images/slider/slider3.png');
-}
-#home-slide-4 {
-	background-image: url('../../images/slider/slider-4.jpg');
+	background-image: url('../../images/slider/slider3.jpg');
 }
 .todobox-bg-1 { 
 	background-image: url('../../images/todobox-bg/01.png'); 
