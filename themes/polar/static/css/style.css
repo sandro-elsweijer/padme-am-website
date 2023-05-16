@@ -161,6 +161,37 @@ a:focus{
 	margin-bottom: -2px;
 	margin-left: -10px;
 }
+.subsection-title {
+	/*color: #910035; /* #910035 */
+	font-size: 1.5em;
+	margin-top: 0;
+	padding-bottom: 15px;
+}
+.subsection-title.stripe {
+	text-align: center;
+	position: relative;
+	padding-bottom: 35px;
+	margin-bottom: 80px;
+}
+.subsection-title.stripe:after,
+.subsection-title.stripe:before {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 50%;
+	background-color: #910035;
+}
+.subsection-title.stripe:after {
+	width: 200px;
+	height: 1px;
+	margin-left: -100px;
+}
+.subsection-title.stripe:before {
+	width: 20px;
+	height: 5px;
+	margin-bottom: -2px;
+	margin-left: -10px;
+}
 .v2 .section-title {
 	font-size: 5em;
 	font-weight: 300;
