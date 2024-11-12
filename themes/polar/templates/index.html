@@ -1,105 +1,47 @@
 {% extends "base.html" %}
 {% block content %}
-<section id="content">
+<section id="home">
 
-
-	<section id="home-slider">
-		<div class="top-section image-slide">
-			<div id="top-carousel" class="carousel slide top-slider-container v2" data-ride="carousel">
-				<div class="carousel-inner">
-					<div class="item active">
-						<div id="home-slide-1" class="slide-img-bg"> 
-							<div class="slide-contents overlay"> 
-								<div class="container">
-									<div class="top-headings">
-										<h2 class="top-heading-1"> 
-											t8code
-										</h2> 
-										<h3 class="top-heading-2"> 
-											Exascale ready adaptive mesh refinement 
-											for all element shapes!
-										</h3>
-									</div><!-- /.top-headings -->
-									<p class="top-sec-txt">
-										Don't worry about your mesh data! t8code provides fast mesh and data management with excellent scaling properties and was tested on up to 1 million cores with up to 1.1 trillion elements.
-									</p>
-									<!--<div class="button-container">
-										<a href="{{ SITEURL }}/pages/features.html">
-											<button type="button" class="btn top-sec-btn">Features</button>
-										</a>-->
-										<!--<a class="video-link" href="https://www.youtube-nocookie.com/embed/0OfmtIhmozY"><span class="icon"><i class="fa fa-play-circle-o"></i></span> Graphical User Interface - Fly Through </a>-->
-									<!--</div--><!-- /.button-container -->
-								</div><!-- /.container -->
-							</div><!-- /.slide-contents --> 
-						</div><!-- /.background-bg -->
-					</div><!-- /.item -->
-
-					<div class="item">
-						<div id="home-slide-2" class="slide-img-bg"> 
-							<div class="slide-contents overlay"> 
-								<div class="container">
-									<div class="top-headings">
-										<h2 class="top-heading-1"> 
-											YOUR IMAGINATION IS THE LIMIT	
-										</h2> 
-									</div><!-- /.top-headings -->
-									<p class="top-sec-txt">
-										Due to the low and high level functions t8code is straightforward to use, while being highly versatile.
-										Take a look at our showcase for examples!
-									</p>
-									<div class="button-container">
-										<a href="{{ SITEURL }}/pages/showcase.html">
-											<button type="button" class="btn top-sec-btn">Showcase</button> 
-										</a>
-									</div><!-- /.button-container -->
-								</div>
-							</div><!-- /.slide-contents --> 
-						</div><!-- /.background-bg -->
-					</div><!-- /.item -->
-
-					<div class="item">
-						<div id="home-slide-3" class="slide-img-bg">  
-							<div class="slide-contents overlay"> 
-								<div class="container">
-									<div class="top-headings">
-										<h2 class="top-heading-1"> 
-											DIRECT SUPPORT
-										</h2> 
-									</div><!-- /.top-headings -->
-									<p class="top-sec-txt">
-										If you have any questions about t8code, its usage or any ideas, feel free to contact the developers.
-									</p>
-									<div class="button-container">
-										<a href="{{ SITEURL }}/pages/contact.html" target="_blank">
-											<button type="button" class="btn top-sec-btn">Contact us</button>
-										</a>
-									</div><!-- /.button-container -->
-								</div>
-							</div><!-- /.slide-contents --> 
-						</div><!-- /.background-bg -->
-					</div><!-- /.item -->
-					
-					
-
-				</div><!-- /.carousel-inner --> 
-				<!-- Controls -->
-				<a class="left slide-nav" href="#top-carousel" role="button" data-slide="prev">
-					<i class="fa fa-angle-left"></i>
-					<span class="sr-only">Previous</span>
-				</a>
-				<a class="right slide-nav" href="#top-carousel" role="button" data-slide="next">
-					<i class="fa fa-angle-right"></i>
-					<span class="sr-only">Next</span>
-				</a>
-			</div><!-- /#top-carousel /.top-carousel-container --> 
-		</div><!-- /.top-section -->
-	</section>
-
-
-
-	<div id="contents"> 
+	<div id="slider" style="margin-top: 100px;">
 		<div class="container">
-			<section class="row about-us section-padding pb0">
+			<div class="top-section image-slide">
+				<div id="top-carousel" class="carousel slide top-slider-container v2" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="item active">
+							<div id="home-slide-1" class="slide-img-bg">
+								<div class="slide-contents">
+								</div><!-- /.slide-contents -->
+							</div><!-- /.background-bg -->
+						</div><!-- /.item -->
+
+						<div class="item">
+							<div id="home-slide-2" class="slide-img-bg">
+								<div class="slide-contents ">
+								</div><!-- /.slide-contents -->
+							</div><!-- /.background-bg -->
+						</div><!-- /.item -->
+
+						<div class="item">
+							<div id="home-slide-3" class="slide-img-bg">
+								<div class="slide-contents">
+								</div><!-- /.slide-contents -->
+							</div><!-- /.background-bg -->
+						</div><!-- /.item -->
+
+					</div><!-- /.carousel-inner -->
+					<!-- Controls -->
+					<a class="left slide-nav" href="#top-carousel" role="button" data-slide="prev">
+						<i class="fa fa-angle-left"></i>
+						<span class="sr-only">Previous</span>
+					</a>
+					<a class="right slide-nav" href="#top-carousel" role="button" data-slide="next">
+						<i class="fa fa-angle-right"></i>
+						<span class="sr-only">Next</span>
+					</a>
+				</div><!-- /#top-carousel /.top-carousel-container -->
+			</div><!-- /.top-section -->
+
+			<section id="contents" class="row about-us section-padding pb0">
 				<div class="col-md-12">
 					<h2 class="section-title">Overall Research Goals</h2>
 					<p>Additive manufacturing (AM) has gained more and more momentum in recent
@@ -116,7 +58,7 @@
 						in principle be overcome by advanced modeling and simulation of the
 						manufacturing process which will then allow to optimize the process.</p>
 						<p>For the design of AM components and for the simulation of a Laser Powder
-						Bed Fusion (LPBF) process, solutions are offered by various software
+						Bed Fusion (L-PBF) process, solutions are offered by various software
 						vendors, such as Siemens, Altair or ANSYS. However, these solutions
 						reflect the low level of maturity of the still young 3D printing
 						technologies. Their capabilities are not sufficient to obtain accurate
@@ -124,7 +66,7 @@
 						multiscale and multidisciplinary approach is required that combines
 						experimental and theoretical work with computer simulations on multiple
 						length scales.</p>
-						<p>The simulation of the LPBF process involves various
+						<p>The simulation of the L-PBF process involves various
 						challenges. Obviously, the domain evolves during the process by adding
 						additional layers of powder. Moreover, multiple phase changes need to be
 						resolved, from powder to liquid and from liquid to solid, since a direct
@@ -134,7 +76,7 @@
 						source is highly localized (about 100 micron) and in case of AMB laser
 						sources may require the resolution of even further details.
 						Yet, the printed product is typically on the scale of decimeters and
-						scale separation in LPBF is not given due to the intermediate powder bed
+						scale separation in L-PBF is not given due to the intermediate powder bed
 						layer scale. Similarly, a large range of time scales is involved and
 						needs to be resolved appropriately. While local melting and
 						solidification takes place within milliseconds, the complete
@@ -151,26 +93,132 @@
 						image; c) MPM data of a small cuboid exhibiting different
 						microstructures; d) MPM data and image of a larger component. (source:
 						DLR)</p>
-						<div class="feature-image">
-							<img alt="image" src="https://ins.uni-bonn.de/media/public/projects/partition-of-unity-methods-for-additive-manufacturing/AMB-vs-normal-laser-welding.jpg" />
-						  <img alt="image" src="https://ins.uni-bonn.de/media/public/projects/partition-of-unity-methods-for-additive-manufacturing/amb_laser_1.jpg" />
-						</div>
-						<p>Overall, the LPBF process constitutes a multi-physics problem, where the
+						<p>Overall, the L-PBF process constitutes a multi-physics problem, where the
 						largest temperature gradients are induced by the moving and highly
 						localized laser beam which in turn yield the phase changes in close
 						vicinity of the beam. The involved phase changes are typically modeled
 						by</p>
-						<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mi>c</mi><mfrac><mrow><mi mathvariant="normal">∂</mi><mi>T</mi></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi>ρ</mi><mi>L</mi><mfrac><mrow><mi mathvariant="normal">∂</mi><msub><mi>f</mi><mrow><mi>p</mi><mi>c</mi></mrow></msub></mrow><mrow><mi mathvariant="normal">∂</mi><mi>t</mi></mrow></mfrac><mo>−</mo><mi mathvariant="normal">∇</mi><mo>⋅</mo><mo stretchy="false">(</mo><mi>k</mi><mi mathvariant="normal">∇</mi><mi>T</mi><mo stretchy="false">)</mo><mo>=</mo><mi>Q</mi></mrow><annotation encoding="application/x-tex">\rho c \frac{\partial T}{\partial t} + \rho L \frac{\partial f_{pc}}{\partial t} - \nabla \cdot (k \nabla T) = Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="mord mathdefault">ρ</span><span class="mord mathdefault">c</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:2.05744em;vertical-align:-0.686em;"></span><span class="mord mathdefault">ρ</span><span class="mord mathdefault">L</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.37144em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault">t</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span><span class="mord mathdefault mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">∇</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord">∇</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">Q</span></span></span></span></span></p>
-						<p>where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\rho</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">ρ</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi></mrow><annotation encoding="application/x-tex">c</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">c</span></span></span></span>, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi></mrow><annotation encoding="application/x-tex">L</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault">L</span></span></span></span> and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi>p</mi><mi>c</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_{pc}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.980548em;vertical-align:-0.286108em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.15139200000000003em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">p</span><span class="mord mathdefault mtight">c</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.286108em;"><span></span></span></span></span></span></span></span></span></span> denote density, specific heat
-						capacity, latent heat and a phase-change function, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi></mrow><annotation encoding="application/x-tex">k</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span></span></span></span> is the thermal
-						conductivity, <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi></mrow><annotation encoding="application/x-tex">Q</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">Q</span></span></span></span> is the heat source and <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span> the temperature. Due to the
+						<p>
+							<math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+								<mrow>
+								  <mi>ρ</mi>
+								  <mi>c</mi>
+								  <mfrac>
+									<mrow>
+									  <mi>∂</mi>
+									  <mi>T</mi>
+									</mrow>
+									<mrow>
+									  <mi>∂</mi>
+									  <mi>t</mi>
+									</mrow>
+								  </mfrac>
+								  <mo>+</mo>
+								  <mi>ρ</mi>
+								  <mi>L</mi>
+								  <mfrac>
+									<mrow>
+									  <mi>∂</mi>
+									  <msub>
+										<mi>f</mi>
+										<mrow>
+										  <mi>p</mi>
+										  <mi>c</mi>
+										</mrow>
+									  </msub>
+									</mrow>
+									<mrow>
+									  <mi>∂</mi>
+									  <mi>t</mi>
+									</mrow>
+								  </mfrac>
+								  <mo>−</mo>
+								  <mi>∇</mi>
+								  <mo>⋅</mo>
+								  <mrow>
+									<mo stretchy="true" form="prefix">(</mo>
+									<mi>k</mi>
+									<mi>∇</mi>
+									<mi>T</mi>
+									<mo stretchy="true" form="postfix">)</mo>
+								  </mrow>
+								  <mo>=</mo>
+								  <mi>Q</mi>
+								  <mo>,</mo>
+								</mrow>
+							  </math>
+						where 
+						<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+							<mi>ρ</mi>
+						</math>, 
+						<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+							<mi>c</mi>
+						</math>, 
+						<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+							<mi>L</mi>
+						</math> and
+						<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+							<msub>
+							  <mi>f</mi>
+							  <mrow>
+								<mi>p</mi>
+								<mi>c</mi>
+							  </mrow>
+							</msub>
+						  </math>
+						denote density, specific heat
+						capacity, latent heat and a phase-change function,
+						<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+						    <mi>k</mi>
+						</math>
+						is the thermal conductivity,
+						<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+							<mi>Q</mi>
+						</math>
+						is the heat source and 
+						<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+							<mi>T</mi>
+						</math>
+						the temperature. Due to the
 						significant changes in temperature during the process, some regions in
 						the domain expand, while some others contract which leads to residual
 						stresses in the part and potentially render the product not fit-for-use
 						in safety-relevant applications. These stresses are computed via a
 						quasi-static mechanical model given by</p>
-						<p><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">∇</mi><mo>⋅</mo><mi>σ</mi><mo>+</mo><mi>f</mi><mo>−</mo><msub><mi>f</mi><mrow><mi>t</mi><mi>h</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \sigma + f - f_{th} = 0</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">∇</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">⋅</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight">h</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">0</span></span></span></span></span> </p>
-						<p>where <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mrow><mi>t</mi><mi>h</mi></mrow></msub></mrow><annotation encoding="application/x-tex">f_{th}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.10764em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">t</span><span class="mord mathdefault mtight">h</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span> denotes the thermal load induced by the temperature field <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span></span></span></span>.</p>
+						<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML">
+							<mrow>
+							  <mi>∇</mi>
+							  <mo>⋅</mo>
+							  <mi>σ</mi>
+							  <mo>+</mo>
+							  <mi>f</mi>
+							  <mo>−</mo>
+							  <msub>
+								<mi>f</mi>
+								<mrow>
+								  <mi>t</mi>
+								  <mi>h</mi>
+								</mrow>
+							  </msub>
+							  <mo>=</mo>
+							  <mn>0</mn>
+							</mrow>
+						  </math></p>
+						<p>where 
+						<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+						  <msub>
+						    <mi>f</mi>
+						    <mrow>
+						  	  <mi>t</mi>
+						  	  <mi>h</mi>
+						    </mrow>
+						  </msub>
+						</math>
+						denotes the thermal load induced by the temperature field 
+						<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML">
+							<mi>T</mi>
+						</math>
+						.</p>
 						<p>The simulation environment to be developed is intended to cover all
 						relevant scales in the long term from the powder level to the entire
 						component. In order to build up a process simulation tool that can be
@@ -194,118 +242,168 @@
 						how the heat input by the lasers at powder level is transferred to the
 						overall component.</p>
 				</div><!-- /.col-md-12 -->
+				<div class="col-md-12">
+					<div class="overlay subsection-padding">
+					    <h2 class="subsection-title">Sustainability</h2>
+					    <p>
+					    The PADME-AM project is focused on advancing the field of AM by integrating sustainability principles and bridging the gap between mathematical simulations and real-world applications. The project recognizes the importance of sustainability in AM and aims to enhance the environmental and economic aspects of the L-PBF process.
+					    </p>
+					    <p>
+					    Sustainability in AM is a crucial consideration due to the significant material and energy requirements involved in the manufacturing process. PADME-AM addresses this challenge by developing a systematic approach to optimize the L-PBF process for improved sustainability. By reducing material waste, minimizing energy consumption, and optimizing process parameters, the project aims to enhance the overall efficiency and environmental footprint of AM.
+					    </p>
+					    <p>
+					    A key aspect of the project is the transfer of mathematical results and simulations into real-world application. The mathematical models and simulations developed within PADME-AM will be validated and refined through experimental investigations. This iterative process ensures that the mathematical predictions align with the actual behavior of the L-PBF process.
+					    </p>
+					    <p>
+					    Furthermore, the project emphasizes the development of an industrially viable simulation environment. This environment will allow manufacturers to effectively implement the insights gained from mathematical models and simulations into their production processes. By integrating the expertise of multiple stakeholders, including additive manufacturing researchers, industry partners, and simulation developers, the project aims to create a user-friendly and scalable simulation platform.
+					    </p>
+					    <p>
+					    Ultimately, the goal of PADME-AM is to contribute to a more sustainable future for additive manufacturing. By combining mathematical modeling, experimental validation, and real-world implementation, the project aims to optimize the L-PBF process for improved sustainability and facilitate the widespread adoption of environmentally conscious additive manufacturing practices.
+					    </p>
+					</div><!-- /.overlay -->
+				</div><!-- /.col-md-12 -->
 			</section><!-- /.about-us -->
-			
-			<section id="news" class="news row section-padding pb0">
-				<!-- <div class="row"> -->
-					<div class="col-md-9">
-						<div class="blog-page"> 
 
-							{% for article in articles_page.object_list %}
+			<section id="participants" class="row about-us section-padding pb0">
+				<div class="col-md-12">
+					<h2 class="section-title">Project Participants</h2>
+				</div>
+				<section id="success-story">
+					<div class="success-story background-bg">
+						<div class="overlay subsection-padding">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<h2 class="subsection-title">Institute for Numerical Simulation</h2>
+									</div>
+									<div class="col-md-6">
+										<p>
+											The Institute for Numerical Simulation of the Rheinische Friedrich-Wilhelms-Universität Bonn is devoted to the design and implementation of computational tools for scientific applications. We develop novel numerical techniques for the simulation of e.g. chemical, physical, engineering and economic processes. Our research and development activities are application driven.
+										</p>
+										<p>	
+											The INS's core competencies include high performance scientific computing, numerical mathematics, computational chemistry and physics, as well as financial engineering. We conduct collaborative scientific investigations which require the power of high performance computers and the efficiency of modern computational methods.
+										</p>
+									</div><!-- /.col-md-6 -->
 
-							<article class="type-post single-news single-post">
-								{% if article.image %} 
-									<div class="post-thumbnail">
-										<img src="{{ SITEURL }}/images/{{ article.image }}" alt="Event Post Thumbnail Image">   
-									</div><!-- /.post-thumbnail --> 	
-								{% endif %}
-										 
+									<div class="col-md-3">
+										<div class="feature-image">
+											<img src="pages/images/contact/INSLogoEN.png">
+										</div>
+									</div><!-- /.col-md-3 -->
+								</div><!-- /.row -->
+							</div><!-- /.container -->
+						</div><!-- /.overlay -->
+					</div><!-- /.background-bg -->
+				</section><!-- /#success-story -->
+				<section id="success-story">
+					<div class="success-story background-bg">
+						<div class="overlay subsection-padding">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<h2 class="subsection-title">
+											Institute for Software Technology
+										</h2>
+									</div>
+									<div class="col-md-6">
+										<p>
+											The Institute for Software Technology supports and enables cutting-edge research at the German Aerospace Center (DLR) through advanced software solutions. In addition to its own basic research, the institute offers its expertise as a partner for projects in all areas of DLR, including aerospace, transportation, energy, and security. At the core of the institute's activities is the development of accessible open-source software, as well as a wide range of training and consulting programs within the Helmholtz Association.
+										</p>
+									</div><!-- /.col-md-6 -->
 
-								<h2 class="post-title">
-									<a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a>
-								</h2> 
+									<div class="col-md-3">
+										<div class="feature-image">
+											<img src="pages/images/contact/DLR_Logo_EN_schwarz.png">
+										</div>
+									</div><!-- /.col-md-3 -->
+								</div><!-- /.row -->
+							</div><!-- /.container -->
+						</div><!-- /.overlay -->
+					</div><!-- /.background-bg -->
+				</section><!-- /#success-story -->
+				<section id="success-story">
+					<div class="success-story background-bg">
+						<div class="overlay subsection-padding">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<h2 class="subsection-title">
+											Institute of Materials Science
+										</h2>
+									</div>
+									<div class="col-md-6">
+										<p>
+											The DLR's Institute of Materials Research in Cologne possesses strong expertise in experimental and numerical methods, ceramics, high temperature and functional coatings, thermoelectric materials, aerogels, and metallic and hybrid materials. Two key research topics of the institute are investigated by the research group Materials and Design: metal additive manufacturing technologies and advanced materials characterization with unique laboratory techniques. Among many others, research activities focus on thermal history during additive manufacturing to develop process-material-correlations and therefore the transfer of the knowledge from coupon level to manufacturing of complex components.
+										</p>
+									</div><!-- /.col-md-6 -->
 
-								<footer class="entry-meta">
-									<span class="author">
-									{% for author in article.authors %}
-										<a href="{{ SITEURL }}/{{ author.url }}" rel="author">
-											<i class="fa fa-user"></i>
-											{{ author }}
-										</a> 
-									{% endfor %}
-									</span>
-									<span class="entry-date">
-										<i class="fa fa-calendar-o"></i>
-										<span class="date">{{ article.locale_date }}</span>
+									<div class="col-md-3">
+										<div class="feature-image">
+											<img src="pages/images/contact/DLR_Logo_EN_schwarz.png">
+										</div>
+									</div><!-- /.col-md-3 -->
+								</div><!-- /.row -->
+							</div><!-- /.container -->
+						</div><!-- /.overlay -->
+					</div><!-- /.background-bg -->
+				</section><!-- /#success-story -->
+				<section id="success-story">
+					<div class="success-story background-bg">
+						<div class="overlay subsection-padding">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<h2 class="subsection-title">
+											Access Technology
+										</h2>
+									</div>
+									<div class="col-md-6">
+										<p>
+											Access e.V. is a non-profit, independent research institute in Aachen. Founded in 1986 as a spin-off of RWTH Aachen University, it has now become a renowned center for materials research and innovative manufacturing processes, particularly for metallic materials. In its own TechCenter, casting production routes and materials are developed and qualified for a wide range of industrial applications. A cross-cutting theme is digital technologies, which are developed as standalone simulation tools and can be integrated into virtual process chains. The thematic and methodological diversity serves to quickly and specifically meet specific customer requirements and tackle major societal challenges together.
+										</p>
+									</div><!-- /.col-md-6 -->
 
-									</span>
-									<span class="comments-link">
-										<a href="{{ SITEURL }}/{{ article.url }}" rel="link">
-											<i class="fa fa-link"></i>
-											Permalink
-										</a>
-									</span>
-									<!--
-									<span class="comments-link">
-										<i class="fa fa-comment-o"></i>
-										<a href="#" title="comment on Saving Polar Bears" >3 Comments </a>
-									</span>
-									-->
-									{% if article.category %} 
-										<span class="cat-links">
-											<i class="fa fa-folder-o"></i>
-											<a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-										</span>
-									{% endif %}
+									<div class="col-md-3">
+										<div class="feature-image">
+											<img src="pages/images/contact/Access-Logo.jpg">
+										</div>
+									</div><!-- /.col-md-3 -->
+								</div><!-- /.row -->
+							</div><!-- /.container -->
+						</div><!-- /.overlay -->
+					</div><!-- /.background-bg -->
+				</section><!-- /#success-story -->
+				<section id="success-story">
+					<div class="success-story background-bg">
+						<div class="overlay subsection-padding">
+							<div class="container">
+								<div class="row">
+									<div class="col-md-12">
+										<h2 class="subsection-title">
+											Fraunhofer SCAI
+										</h2>
+									</div>
+									<div class="col-md-6">
+										<p>
+											The Fraunhofer Institute for Algorithms and Scientific Computing SCAI combines know-how in mathematical and computational methods with a focus on the development of innovative algorithms and their take-up in industrial practice - bringing benefits to customers and partners.
+										</p>
+										<p>
+											SCAI's research fields in Computational Science include machine learning and data analysis, optimization, multiphysics, energy network evaluation, virtual material design, multiscale methods, high performance computing, and computational finance.
+										</p>
+									</div><!-- /.col-md-6 -->
 
-									{% if article.tags %} 
-										<span class="cat-links">
-											<i class="fa fa-tags"></i>
-											{% for tag in article.tags %}
-												<a href="{{ SITEURL }}/{{ tag.url }}" rel="category tag">{{ tag }}</a>,
-											{% endfor %}
-										</span>
-									{% endif %}
-										
-
-
-								</footer><!-- /.entry-meta --> 
-								<div class="entry"> 
-									<p>
-										{{ article.summary }}  
-								</div><!-- /.entry --> 
-								<div class="btn-container">
-									<a href="{{ SITEURL }}/{{ article.url }}" class="read-more">
-										Learn more <i class="fa fa-arrow-circle-o-right"></i>
-									</a>
-								</div>
-
-							</article> 
-							{% endfor %}
-
-
-
-							<nav class="pagination paging-navigation" role="navigation">
-								{% if articles_page.has_previous() %}
-								{% set num = articles_page.previous_page_number() %}
-	    							<a class="prev page-numbers" href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html"><i class="fa fa-angle-double-left"></i></a>
-								{% else %}
-	    							<a class="prev disabled" href="#"><i class="fa fa-angle-double-left"></i></a>
-								{% endif %}
-
-								{% for num in range( 1, 1 + articles_paginator.num_pages ) %}
-	    							<a class="page-numbers {{ 'active' if num == articles_page.number else '' }}" href="{{ SITEURL }}/{{ page_name }}{{ num if num > 1 else '' }}.html">{{ num }}</a>
-								{% endfor %}
-
-								{% if articles_page.has_next() %}
-	    							<a class="next page-numbers" href="{{ SITEURL }}/{{ page_name }}{{ articles_page.next_page_number() }}.html" title="Next"><i class="fa fa-angle-double-right"></i></a>
-								{% else %}
-							    	<a class="next disabled" href="#"><i class="fa fa-angle-double-right"></i></a>
-								{% endif %}
-							</nav><!-- /.paging-navigation -->
-
-
-
-
-						</div><!-- /.blog-page -->
-
-
-					</div><!-- /.col-md-9 -->
-
-			<!--	</div><!-- /.row --> 
-			</section><!-- /.news -->		
-
-		</div><!-- /.container --> 
+									<div class="col-md-3">
+										<div class="feature-image">
+											<img src="pages/images/contact/scai_logo.svg">
+										</div>
+									</div><!-- /.col-md-3 -->
+								</div><!-- /.row -->
+							</div><!-- /.container -->
+						</div><!-- /.overlay -->
+					</div><!-- /.background-bg -->
+				</section><!-- /#success-story -->
+			</section><!--/.participants-->
+		</div><!-- /.container -->
 
 	</div><!-- /.contents -->
 

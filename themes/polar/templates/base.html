@@ -47,8 +47,8 @@
     {% else %}
     <meta name="description" content="{{ SITE_SUMMARY }}"/>
     {% endif%} 
-	<meta name="keywords" content="t8code, adaptive mesh refinement, amr, dlr, hpc, adaptive meshes, exascale, simulation, cpp, numerical, finite volume, discontinuous galerkin, Open Source">
-	<meta name="author" content="Deutsches Zentrum für Luft- und Raumfahrt e.V. (DLR)">
+	<meta name="keywords" content="ins, dlr, hpc, simulation, cpp, numerical, pum, partition of unity, slm, selective laser melting">
+	<meta name="author" content="Institute for Numerical Simulation">
 
 	{% if article %}
 	{% for tag in article.ogtags %}
@@ -162,7 +162,7 @@
 					<!--	<li><a href="{{ SITEURL }}/#contents">What is TiGL?</a></li>   -->
 						
 						<li><a {% if page_name != "index" %}class="not-in-home"{% endif %} href="{{ SITEURL }}/#contents">Research Goals</a></li>
-						<li><a {% if page_name != "index" %}class="not-in-home"{% endif %} href="{{ SITEURL }}/#news">News</a></li>
+						<li><a {% if page_name != "index" %}class="not-in-home"{% endif %} href="{{ SITEURL }}/#participants">Project Participants</a></li>
 
 						{% for title, link in MENUITEMS %}
             			<li><a class="not-in-home" href="{{ link }}">{{ title }}</a></li>
@@ -179,10 +179,12 @@
             					{% endfor %}
           					{% endif %}
         				{% endif %}
+						<li>
+						    <a a class="not-in-home" target="_blank" href="https://www.bmbf.de/bmbf/en/home/home_node.html">
+						    	<img src="{{ SITEURL }}/pages/images/contact/BMBF_gefoerdert_2017_en.jpg" alt="BMBF" width="150">
+						    </a>
+						</li>
 
-
-
-						<li><a class="donate red" href="{{ SITEURL }}/pages/download.html">Download</a></li>     
 					</ul> <!-- /#mainNavigation -->
 				</nav> <!-- /.navbar-collapse  -->
 			</div> <!-- /.container -->
@@ -199,12 +201,12 @@
 		<div class="social-btn footer-social text-center">
 			<!--<a href="https://twitter.com" class="twitter"><i class="fa fa-twitter"></i></a>-->
 			<!--<a href="https://www.youtube.com" class="youtube"><i class="fa fa-youtube"></i></a>-->
-			<a href="https://github.com/DLR-AMR/t8code" class="github"><i class="fa fa-github"></i></a>
+			<!--<a href="https://github.com/DLR-AMR/t8code" class="github"><i class="fa fa-github"></i></a>-->
 		</div>
 
 
 		<div class="site-info text-center">
-			 &copy; 2022 <a href="http://www.DLR.de">Deutsches Zentrum für Luft- und Raumfahrt e.V.</a>
+			 &copy; <script>document.write(/\d{4}/.exec(Date())[0])</script>
 
 			 {% if LINKS %}
 				{% for name, link in LINKS %}
@@ -247,13 +249,6 @@
 	        		easing: 'swing'
 	        	});  
 	        });
-		$(window).on('scroll', function (){ 
-			if ($(window).scrollTop() >$(window).height()-110){
-				$('#main-menu').addClass('navbar-fixed-top'); 
-			} else {
-				$('#main-menu').removeClass('navbar-fixed-top'); 
-			} 
-		});
 	 })(jQuery);
 	</script>
 

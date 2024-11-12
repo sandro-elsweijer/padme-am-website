@@ -104,10 +104,10 @@ jobs:
           command: sudo apt install rsync
 
       # Tell CircleCI to use the SSH key we've set up with permissions to push to the webserver
-      #- add_ssh_keys:
-      #    fingerprints:
-      #      # The SSH key fingerprint
-      #      - "54:45:ad:2d:50:a5:39:ed:72:dc:f1:05:61:50:27:3f"
+      - add_ssh_keys:
+          fingerprints:
+            # The SSH key fingerprint
+            - "54:45:ad:2d:50:a5:39:ed:72:dc:f1:05:61:50:27:3f"
 
       # get the right key for the webserver
       - run: ssh-keyscan -p $SSH_PORT $SSH_HOST >> ~/.ssh/known_hosts
